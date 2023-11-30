@@ -15,18 +15,21 @@
 # print(multiply(n_1, n_2))
 
 
-# # 2 задание
-# 
-# def my_decorator(multiply):
+# # 2 задача
+
+# def my_decorator(func):
 #     def wrapper(*args, **kwargs):
-#         print(f'Вызываю функцию {multiply.__name__} с аргументами {args}')
-#         result = multiply(*args, **kwargs)
-#     return  wrapper
+#         print(f'Вызываю функцию {func.__name__} с аргументами {args=} {kwargs=}')
+#         return func(*args, **kwargs) * 2
+#     return wrapper
+# 
 # 
 # @my_decorator
-# def multiply(*args, **kwargs):
-#     return  args * kwargs
+# def summ(num_1, num_2):
+#     return num_1 + num_2
 # 
 # 
 # n_1 = int(input("Введите первое число: "))
 # n_2 = int(input("Введите второе число: "))
+# 
+# print(summ(n_1, n_2))
